@@ -1,33 +1,55 @@
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: lightyellow;
-    color: darkgreen;
-    text-align: center;
-    margin: 20px;
+  font-family: Arial;
+  background-color: darkgreen;
+  color: black;
+  text-align: start;
+  margin: 0px;
+  background-image: url("/images/agriculture.jpeg");
+  background-size: cover;
 }
 
 h1 {
-    color: orange;
-    font-weight: bold;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 h2 {
-    color: darkorange;
-    font-weight: bold;
+  color: darkorange;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.6px;
 }
 
-img {
-    border-radius: 10px;
-    width: 200px;
+.nav-links{
+  display:flex;
+  font-size: 40px;
+  justify-content: space-between 0px;
+  align-items: center;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  padding: 20px; 
+  margin-top: 0px;
+  gap: 20px;
+  
+  
 }
-
-hr {
-    border: 2px solid orange;
+  .nav-links h1,a{
+    color: rgb(54, 13, 186);
+    text-decoration: none;
+    font-size: 16px;
 }
-
+.Farming {
+  background-color: white;
+  padding-bottom: 50px;
+  padding: 50px;
+  font-size: 15px;
+}
+.test{
+  color: green;
+  font-size: 50px;
+}
