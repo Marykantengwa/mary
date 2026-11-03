@@ -1,0 +1,173 @@
+/* Main Agriculture Section */
+.agriculture-main {
+  flex: 1;
+  background-color: white;
+}
+
+/* Background Image */
+.agriculture-hero {
+  height: 330px;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+    url(/images/green-field-with-tire-marks_1204-37.avif);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 20px 11%;
+}
+
+/* Text on Background Image */
+.hero-title {
+  color: white;
+}
+
+.hero-title h1 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.hero-title p {
+  font-size: 18px;
+}
+
+/* Cards Section */
+.agriculture-content {
+  width: 78%;
+  margin: -80px auto 0;
+  position: relative;
+}
+
+/* Three Cards in One Row */
+.agriculture-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* Individual Card */
+.agriculture-card {
+  background-color: white;
+  padding: 35px 30px;
+  min-height: 300px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  border-radius: 3px;
+}
+
+/* Card Icons */
+.card-icon {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+/* Card Headings */
+.agriculture-card h2 {
+  font-size: 21px;
+  color: #174b35;
+  margin-bottom: 12px;
+}
+
+/* Card Paragraphs */
+.agriculture-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #888;
+  text-align: justify;
+}
+
+/* Read More Links */
+.agriculture-card a {
+  display: inline-block;
+  color: #174b35;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.agriculture-card a:hover {
+  color: #b58b36;
+}
+
+.pagination a {
+  color: #0795d0;
+  text-decoration: none;
+  border: 1px solid #0795d0;
+  padding: 13px 17px;
+  font-size: 17px;
+}
+
+.pagination a:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.pagination a:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.pagination .active {
+  background-color: #0795d0;
+  color: white;
+}
+
+/* Explore More Button */
+.explore-more {
+  text-align: center;
+  margin: 85px 0 50px;
+}
+
+.explore-more a {
+  display: inline-block;
+  background-color: #174b35;
+  color: white;
+  text-decoration: none;
+  padding: 14px 55px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.explore-more a:hover {
+  background-color: #b58b36;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .agriculture-hero {
+    height: 280px;
+    padding: 20px;
+  }
+
+  .hero-title h1 {
+    font-size: 25px;
+  }
+
+  .agriculture-content {
+    width: 90%;
+  }
+
+  .agriculture-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pagination {
+    margin-top: 40px;
+  }
+
+  .explore {
+    margin-top: 50px;
+  }
+}
+
+.explore a {
+    background-color: #174b35;
+    color: white;
+    text-decoration: none;
+    padding: 15px 50px;
+    border-radius: 5px;
+    transform: translatey(200px)
+    
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Registration</title>
+    <link rel="stylesheet" href="form.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-card">
+        <div class="form-header">
+          <h1>Create Account</h1>
+          <p>Join thousands of professionals today</p>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="signup">Sign Up</button>
+          <button class="tab-btn" data-tab="login">Login</button>
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <form id="signup-form" class="form active">
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" required />
+          </div>
+
+          <div class="input-row">
+            <div class="input-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="Enter your Email" required />
+            </div>
+            <div class="input-group">
+              <label>Phone Number</label>
+              <div class="phone-input">
+                <select>
+                  <option>+250</option>
+                  <option>+1</option>
+                  <option>+44</option>
+                  <option>+91</option>
+                  <option>+971</option>
+                </select>
+                <input type="tel" placeholder="Enter phone number" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Minimum 8 characters"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn-primary">Create Account</button>
+
+          <div class="divider"><span>or continue with</span></div>
+        </form>
+
+        <!-- LOGIN FORM -->
+        <form id="login-form" class="form">
+          <div class="input-group">
+            <label>Email or Phone</label>
+            <input type="text" placeholder="Email or phone number" required />
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
+              <a href="#" class="forgot">Forgot?</a>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary">Login</button>
+          <p class="switch-text">
+            Don't have an account?
+            <a href="#" onclick="switchTab('signup')">Sign up</a>
+          </p>
+        </form>
+      </div>
+
+      <div class="info-panel">
+        <h2>Welcome to Green Agricultural</h2>
+        <ul>
+          <li>Secure email & phone verification</li>
+          <li>We support you 24/7 </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const tabs = document.querySelectorAll(".tab-btn");
+      const forms = document.querySelectorAll(".form");
+      const headerTitle = document.querySelector(".form-header h1");
+      const headerText = document.querySelector(".form-header p");
+
+      function switchTab(tabName) {
+        tabs.forEach((t) => t.classList.remove("active"));
+        forms.forEach((f) => f.classList.remove("active"));
+        document
+          .querySelector(`[data-tab="${tabName}"]`)
+          .classList.add("active");
+        document.getElementById(`${tabName}-form`).classList.add("active");
+
+        if (tabName === "login") {
+          headerTitle.textContent = "Welcome Back";
+          headerText.textContent = "Login to your account to continue";
+        } else {
+          headerTitle.textContent = "Create Account";
+          headerText.textContent = "Join thousands of professionals today";
+        }
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => switchTab(tab.dataset.tab));
+      });
+    </script>
+  </body>
+</html>
